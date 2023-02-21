@@ -1,5 +1,11 @@
+// 元画像のサイズ（px）
+const originalWidth = 1200;
+const originalHeight = 1440;
+
 const widthField = document.getElementById('widthField');
 const heightField = document.getElementById('heightField');
+widthField.value = originalWidth;
+heightField.value = originalHeight;
 
 const onWidthFieldInput = () => {
     const newWidth = parseInt(widthField.value);
