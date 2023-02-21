@@ -8,8 +8,8 @@ const onResize = () => {
     const currentWindowHeight = window.innerHeight;
 
     // ウィンドウサイズを元に画像サイズを変更する
-    const newWidth = currentWindowWidth;
-    const newHeight = currentWindowHeight;
+    let newWidth = currentWindowWidth;
+    let newHeight = currentWindowHeight;
 
     document.getElementById('myimage').style.width = newWidth + 'px';
     document.getElementById('myimage').style.height = newHeight + 'px';
