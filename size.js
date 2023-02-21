@@ -9,8 +9,8 @@ heightField.value = originalHeight;
 
 const onWidthFieldInput = () => {
     const newWidth = parseInt(widthField.value);
-    const oldHeight = parseInt(heightField.value);
-    const newHeight = oldHeight; // ここを修正
+    const newHeight = originalHeight * newWidth / originalWidth;
+    if (isNaN(newWidth) || isNaN(newHeight)) return;
     heightField.value = newHeight;
     document.getElementById('myimage').style.width = newWidth + 'px';
     document.getElementById('myimage').style.height = newHeight + 'px';
@@ -18,8 +18,8 @@ const onWidthFieldInput = () => {
 
 const onHeightFieldInput = () => {
     const newHeight = parseInt(heightField.value);
-    const oldWidth = parseInt(widthField.value);
-    const newWidth = oldWidth; // ここを修正
+    const newWidth = originalWidth * newHeight / originalHeight;
+    if (isNaN(newWidth) || isNaN(newHeight)) return;
     widthField.value = newWidth;
     document.getElementById('myimage').style.width = newWidth + 'px';
     document.getElementById('myimage').style.height = newHeight + 'px';
