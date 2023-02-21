@@ -11,12 +11,12 @@ const onResize = () => {
     // 画像の幅をウィンドウの幅に合わせた場合
     let newHeight, newWidth;
     if (currentWindowWidth / originalWidth * originalHeight > currentWindowHeight) {
-        // 画像の高さに合わせる必要あり
+        // 画像を高さに合わせる必要あり
         newHeight = currentWindowHeight;
         newWidth = currentWindowHeight / originalHeight * originalWidth;
     }
     else {
-        // 画像の幅に合わせる必要あり
+        // 画像を幅に合わせる必要あり
         newWidth = currentWindowWidth;
         newHeight = currentWindowWidth / originalWidth * originalHeight;
     }
